@@ -9,6 +9,7 @@
 <html class="no-js" lang="">
     <head>
       <!-- Meta-Information -->
+        <title>Briana's Blog</title>
           <meta charset="utf-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,76 +41,33 @@
               <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
           <![endif]-->
 
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+
     </head>
-    <body <span class="highlight">ng-app="brianasBlogWebApp"</span>>
+    <body ng-app="blogCtrl">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <p>Briana's Blog</p>
-
-        <!-- Main Content -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">
-                                Man must explore, and this is exploration at its greatest
-                            </h2>
-                            <h3 class="post-subtitle">
-                                Problems look mighty small from 150 miles up
-                            </h3>
-                        </a>
-                        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+        <div ng-include src='"template/header.html"'></div>
+        <!-- Page Header -->
+        <!-- Set your background image for this header on the line below. -->
+        <header class="intro-header" style="background-image:url('template/img/homeBackground.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="site-heading">
+                            <h1>Briana's Blog</h1>
+                            <hr class="small">
+                            <span class="subheading">Inside Public Relations</span>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">
-                                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                            </h2>
-                        </a>
-                        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
-                    </div>
-                    <hr>
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">
-                                Science has not yet mastered prophecy
-                            </h2>
-                            <h3 class="post-subtitle">
-                                We predict too much for the next year and yet far too little for the next ten.
-                            </h3>
-                        </a>
-                        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
-                    </div>
-                    <hr>
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">
-                                Failure is not an option
-                            </h2>
-                            <h3 class="post-subtitle">
-                                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                            </h3>
-                        </a>
-                        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
-                    </div>
-                    <hr>
-                    <!-- Pager -->
-                    <ul class="pager">
-                        <li class="next">
-                            <a href="#">Older Posts &rarr;</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
-        </div>
-
-        <div <span class="highlight">ng-include='"templates/header.html"'</span>></div>
-        <div <span class="highlight">ng-view</span>></div>
-        <div <span class="highlight">ng-include='"templates/footer.html"'</span>></div>
+        </header>
+        <div ng-view></div>
+        <div ng-include src='"template/footer.html"'></div>
 
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
@@ -122,12 +80,6 @@
 
         <!-- Javascript -->
         <script src="js/blogMain.js"> </script>
-
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    
     </body>
 </html>
